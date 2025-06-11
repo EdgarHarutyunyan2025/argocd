@@ -10,13 +10,9 @@ spec:
     targetRevision: HEAD 
     path: "helm-chart/" 
     helm:
-      releaseName: my-helm-app
-      values: |
-        container:
-          image: nginx
-        service:
-          tg_port: 80
-          container_port: 80
+      releaseName: dev
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
