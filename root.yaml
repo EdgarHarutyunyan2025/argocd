@@ -13,7 +13,7 @@ spec:
       releaseName: my-helm-app
       values: |
         container:
-          image: httpd:alpine
+          image: nginx
         service:
           tg_port: 80
           container_port: 80
