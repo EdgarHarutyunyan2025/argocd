@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/argoproj/argocd-example-app
     targetRevision: HEAD
-    path: "demo/application"
+    path: "helm-chart/"
   destination:
     server: https://kubernetes.default.svc
     namespace: default

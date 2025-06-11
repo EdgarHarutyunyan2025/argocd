@@ -1,0 +1,9 @@
+# Default Values for my Helm Chart
+
+container:
+  image: httpd:alpine
+
+
+service:
+  tg_port: 80
+  container_port: 80
