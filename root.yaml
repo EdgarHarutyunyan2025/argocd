@@ -1,14 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root
+  name: my-helm-app
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/argoproj/argocd-example-app
-    targetRevision: HEAD
-    path: "helm-chart/"
+    repoURL: https://github.com/EdgarHarutyunyan2025/argocd
+    targetRevision: HEAD 
+    path: "helm-chart/" 
+    helm:
+      releaseName: my-helm-app
+      values: |
+        container:
+          image: httpd:alpine
+        service:
+          tg_port: 80
+          container_port: 80
   destination:
     server: https://kubernetes.default.svc
     namespace: default
@@ -16,4 +24,6 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
 
