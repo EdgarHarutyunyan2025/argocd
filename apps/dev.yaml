@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/EdgarHarutyunyan2025/argocd
     targetRevision: main 
-    path: "../helm-chart/" 
+    path: "helm-chart/" 
     helm:
       releaseName: dev
       valueFiles:
