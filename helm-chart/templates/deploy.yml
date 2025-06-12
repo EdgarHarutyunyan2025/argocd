@@ -17,4 +17,4 @@ spec:
         - name: {{ .Release.Name }}-web
           image: {{ .Values.container.image }}
           ports:
-            - containerPort: 80
+            - containerPort: {{ .Values.service.container_port }}
