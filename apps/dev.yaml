@@ -10,11 +10,11 @@ spec:
   source:
     repoURL: https://github.com/EdgarHarutyunyan2025/argocd
     targetRevision: main 
-    path: "helm-chart/dev/" 
+    path: "../helm-chart/" 
     helm:
       releaseName: dev
       valueFiles:
-        - dev-values.yaml
+        - dev/dev-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
