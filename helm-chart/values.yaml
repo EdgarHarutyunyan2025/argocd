@@ -1,7 +1,7 @@
 # Default Values for my Helm Chart
 
 container:
-  image: nginx
+  image: httpd
 
 
 service:
