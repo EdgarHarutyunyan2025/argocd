@@ -10,9 +10,9 @@ spec:
   source:
     repoURL: https://github.com/EdgarHarutyunyan2025/argocd
     targetRevision: HEAD 
-    path: "helm-chart/" 
+    path: "helm-chart/prod/" 
     helm:
-      releaseName: dev
+      releaseName: prod
       valueFiles:
         - prod-values.yaml
   destination:

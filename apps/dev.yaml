@@ -9,8 +9,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/EdgarHarutyunyan2025/argocd
-    targetRevision: HEAD 
-    path: "helm-chart/" 
+    targetRevision: main 
+    path: "helm-chart/dev/" 
     helm:
       releaseName: dev
       valueFiles:
